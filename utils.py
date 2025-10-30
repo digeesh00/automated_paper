@@ -14,7 +14,7 @@ MODEL_NAME = "gemini-2.5-flash"
 
 def configure_api():
     try:
-        api_key = st.secrets["AIzaSyCH46htxjMXLWMF2Kx7eykl1SJSR8s90SQ"]
+        api_key = st.secrets["GEMINI_API_KEY"]
         genai.configure(api_key=api_key)
     except KeyError:
         st.error("GEMINI_API_KEY not found in .streamlit/secrets.toml")
